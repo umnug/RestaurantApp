@@ -1,5 +1,6 @@
 ﻿using FreshMvvm;
 using RestaurantApp.PageModels;
+using RestaurantApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace RestaurantApp
         public App()
         {
             InitializeComponent();
+
+            FreshIOC.Container.Register<IApiService, ApiService>();
 
             var tabContainer = new FreshTabbedNavigationContainer();
 
